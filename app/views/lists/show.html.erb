@@ -1,6 +1,15 @@
 <div>
   <h1><%= @list.name %></h1>
 </div>
+<%# <div>
+  <%= link_to "Add a new bookmark", new_list_bookmark_path %>
+<%# </div> %>
+<div>
+  <% @list.bookmarks.each do |bookmark| %>
+    <%= bookmark.movie.title %>
+  <% end %>
+  <hr>
+</div>
 <div>
   <%= link_to "Back to lists", lists_path %>
 </div>
